@@ -1,38 +1,27 @@
 * {
-  border: 1px solid red;
-  box-sizing: border-box;
+    border: 1px solid red;
+    box-sizing: border-box;
 }
 
 body {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
     height: 100vh;
     margin: 0;
     padding: 0;
-}
-
-#control {
     display: flex;
-    align-items: center;
     justify-content: center;
-    flex: 1;
-
+    align-items: center;
 }
 
 #container {
+    height: 100vmin;
+    width: 100vmin;
     display: flex;
     flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-    width: 100vmin;
-    height: 100vmin;
+    
 }
 
 #container div {
-    flex: 1 0 calc(100% / 16); /* Größe auf 1/16 der Breite setzen */
-    aspect-ratio: 1 / 1; /* Quadratische Form */
-    box-sizing: border-box; 
-    border: 1px solid lightgray; /* Sichtbarkeit der Zellen */
+    flex: 1 0 calc(100%/16);
+    aspect-ratio: 1 / 1;
+    border: 1px solid black;
 }
