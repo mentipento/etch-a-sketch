@@ -27,16 +27,14 @@ button.addEventListener("click", () => {
 
 function hoverEffect() {
     let squares = document.querySelectorAll(".square");
-    squares.forEach(square => square.addEventListener("mouseenter", () => {
-        console.log("clicked");
-        square.style.background = `#${randomColor()}`;
-    }));
+    squares.forEach(square => {
+        let opacity = 10;
+        square.addEventListener("mouseenter", () => {
+        square.style.background = `rgb(0 0 255 / ${opacity}%)`;
+        opacity += 10;
+    })});;
 
 }
 
 hoverEffect()
-
-function randomColor() {
-    return Math.floor(Math.random()*16777215).toString(16);
-}
 
