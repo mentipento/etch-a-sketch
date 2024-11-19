@@ -8,13 +8,15 @@ body {
     margin: 0;
     padding: 0;
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
+    flex-direction: column;
+    
 }
 
 #container {
-    height: 100vmin;
-    width: 100vmin;
+    height: 95vmin;
+    width: 95vmin;
     display: flex;
     flex-wrap: wrap;
     
