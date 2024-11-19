@@ -5,6 +5,7 @@ function createDivs(x = 16) {
     for (let i = 0; i < x ** 2; i++) {
         let square = document.createElement("div");
         square.style.cssText = `flex: 1 0 calc(100% / ${x});`;
+        square.classList.add("square");
         container.appendChild(square);
     }
 }
@@ -20,5 +21,22 @@ button.addEventListener("click", () => {
         createDivs();
     } else {
         createDivs(input);
+        hoverEffect();
     }
 });
+
+function hoverEffect() {
+    let squares = document.querySelectorAll(".square");
+    squares.forEach(square => square.addEventListener("mouseenter", () => {
+        console.log("clicked");
+        square.style.background = `#${randomColor()}`;
+    }));
+
+}
+
+hoverEffect()
+
+function randomColor() {
+    return Math.floor(Math.random()*16777215).toString(16);
+}
+
