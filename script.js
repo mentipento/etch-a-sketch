@@ -32,7 +32,14 @@ function hoverEffect() {
         square.addEventListener("mouseenter", () => {
         square.style.background = `rgb(0 0 255 / ${opacity}%)`;
         opacity += 10;
-    })});;
+    })
+    square.addEventListener("touchstart", (e) => {
+        e.preventDefault(); // Verhindert unerwünschtes Scrollen
+        square.style.background = `rgb(0 0 255 / ${opacity}%)`;
+        opacity += 10;
+    }, { passive: true });
+
+});;
 
 }
 
